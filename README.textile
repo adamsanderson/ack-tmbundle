@@ -41,4 +41,5 @@ The code is based on GrepInProject++ which was itself based on other's code as b
 # Includes some minor modifications by Max (http://max.xaok.org/webtek) 2007-08-01
 # Adds search UI plus some minor modifications by Robert Thurnher (http://soup.robert42.com) 2007-08-11
 # Further modifications by Trevor Squires (http://somethinglearned.com) 2008-05-21
+# Language picker and some other junk no doubt by Adam Sanderson (2009-09-25)
 </pre>
