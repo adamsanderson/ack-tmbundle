@@ -29,7 +29,9 @@ class AckInProject::SearchDialog
     {
       #'contentHeight' => 168,
       'ackExpression' => AckInProject.pbfind,
-      'ackHistory' => history
+      'ackHistory' => history,
+      'ackLanguages' => AckInProject.languages,
+      'selectedLanguage' => AckInProject.languages.first
     }
   end
   

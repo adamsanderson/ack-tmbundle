@@ -88,6 +88,9 @@ class AckInProject::Search
     options << "--#{result['followSymLinks'] == 1 ? '' : 'no'}follow"
     options << "--#{result['loadAckRC'] == 1 ? '' : 'no'}env"
 
+    language = plist['selectedLanguage']
+    options << "--#{language.downcase}" unless language == 'Any'
+    
     AckInProject.update_search_history result['returnArgument']
     AckInProject.update_pbfind result['returnArgument']
 

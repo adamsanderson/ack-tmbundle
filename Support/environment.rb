@@ -121,6 +121,18 @@ module AckInProject
     rescue
     end
     
+    # From ack-standalone.sh
+    def languages
+       languages = %w{
+         Any
+         actionscript asm batch binary cc cfmx cpp csharp css 
+         elisp erlang fortran haskell hh html java js jsp lisp 
+         lua make mason objc objcpp ocaml parrot perl
+         php plone python ruby scheme shell skipped smalltalk 
+         sql tcl tex text tt vb vim yaml xml
+       }
+    end
+    
     def pbfind
       @pbfind ||= %x[pbpaste -pboard find]
     end

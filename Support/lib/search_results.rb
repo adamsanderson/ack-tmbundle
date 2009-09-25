@@ -14,13 +14,15 @@ class AckInProject::SearchResults
       :page_title   => title,
       :html_head    => header_extra()
     )
+    
+    language = plist['selectedLanguage'] unless plist['selectedLanguage'] == 'Any'
     puts <<-HTML
-      <h2>Searching for “#{ h search_string }” in #{ searched_in }</h2>
+      <h2>Searching for “#{ h search_string }” in #{ searched_in } #{"(#{language})" if language }</h2>
       <div id="counters"><span id="linecount">0 lines</span> matched in <span id="filecount">0 files</span></div>
       <script type="text/javascript">searchStarted();</script>
       <table id="results" width="100%" cellspacing="0">
     HTML
-
+    
     AckInProject::Search.new(plist).search
 
     puts <<-HTML
